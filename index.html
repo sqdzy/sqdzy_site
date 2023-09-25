@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sqdzy's Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #363636;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            color: #ffffff;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .nickname {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-link {
+            font-size: 2rem;
+            text-decoration: none;
+            color: #ffffff;
+            display: inline-block;
+            transition: transform 0.2s ease-in-out;
+            margin: 0 20px;
+        }
+        .social-link:hover {
+            transform: scale(1.1);
+        }
+        /* Стиль прелоадера */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #363636;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .loader {
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            border-top: 5px solid #4CAF50;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Контент страницы, который будет показан после загрузки -->
+    <div class="container">
+        <div class="nickname">sqdzy</div>
+        <div class="social-links">
+            <a class="social-link" href="https://t.me/nesqdzy" target="_blank">Telegram: @nesqdzy</a>
+            <a class="social-link" href="https://vk.com/sqdzy" target="_blank">VK: /sqdzy</a>
+            <a class="social-link" href="https://steamcommunity.com/id/sqdzy/" target="_blank">Steam: /sqdzy</a>
+        </div>
+    </div>
+    <script>
+        // Скрипт для скрытия прелоадера после загрузки страницы
+        window.addEventListener('load', function () {
+            const preloader = document.querySelector('.preloader');
+            preloader.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
